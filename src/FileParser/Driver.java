@@ -81,11 +81,9 @@ public class Driver {
 			if(!hasAlphaNum && !non_alphanumeric.contains(word)) {
 				non_alphanumeric.add(word);
 			}
-			
 		}
-		
-		Collections.sort(withoutNOA);
 		//Writing the output on the file.
+		Collections.sort(withoutNOA);
 		outputWithoutNOA.println("Word Count : " + withoutNOA.size());
 		for(int i=0; i<withoutNOA.size(); i++) {
 			outputWithoutNOA.println(withoutNOA.get(i));

@@ -90,6 +90,9 @@ public class Appointment implements Bookable, Cloneable {
 	}
 
 	@Override
+	/**
+	 * 
+	 */
 	public String isOnSameTime(Appointment a) {
 		if(a == null) {
 			return "Different time";
@@ -100,10 +103,16 @@ public class Appointment implements Bookable, Cloneable {
 		if(this.startTime == a.startTime || this.endTime == a.endTime) {
 			return "Some Overlap";
 		}
+		if(this.startTime - a.startTime == 0.5) {
+			return "Some Overlap";
+		}
 		return "Different time";
 	}
 	
 	@Override
+	/**
+	 * 
+	 */
 	public Object clone() throws CloneNotSupportedException{
 		Scanner keyIn = new Scanner(System.in);
 		System.out.print("Enter the Appointment ID : for the clone method: ");
@@ -114,12 +123,18 @@ public class Appointment implements Bookable, Cloneable {
 	}
 
 	@Override
+	/**
+	 * 
+	 */
 	public String toString() {
-		return "Appointment [appointmentID=" + appointmentID + ", doctorName=" + doctorName + ", startTime=" + startTime
+		return "[appointmentID=" + appointmentID + ", doctorName=" + doctorName + ", startTime=" + startTime
 				+ ", endTime=" + endTime + "]";
 	}
 
 	@Override
+	/**
+	 * 
+	 */
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -139,6 +154,4 @@ public class Appointment implements Bookable, Cloneable {
 			return false;
 		return true;
 	}
-	
-	
 }

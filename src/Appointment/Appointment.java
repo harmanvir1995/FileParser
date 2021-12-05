@@ -103,7 +103,7 @@ public class Appointment implements Bookable, Cloneable {
 		if(this.startTime == a.startTime || this.endTime == a.endTime) {
 			return "Some Overlap";
 		}
-		if(this.startTime - a.startTime == 0.5) {
+		if(this.startTime - a.startTime == 0.3) {
 			return "Some Overlap";
 		}
 		return "Different time";
@@ -127,8 +127,8 @@ public class Appointment implements Bookable, Cloneable {
 	 * 
 	 */
 	public String toString() {
-		return "[appointmentID=" + appointmentID + ", doctorName=" + doctorName + ", startTime=" + startTime
-				+ ", endTime=" + endTime + "]";
+		return "[appointmentID = " + appointmentID + ", doctorName = " + doctorName + ", startTime = " + startTime
+				+ ", endTime = " + endTime + "]";
 	}
 
 	@Override

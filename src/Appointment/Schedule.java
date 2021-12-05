@@ -241,10 +241,10 @@ public class Schedule {
 	 */
 	public boolean contains(String appointmentID) {
 		AppointmentNode temp = head;
-		int i;
-		for(i=0; i<size; i++) {
+		for(int i=0; i<size; i++) {
 			if(temp.appointment.getAppointmentID().equals(appointmentID)) {
-				//System.out.println("Total iterations before it found the object are : " + i+1);
+				System.out.println("List contains the ID and "
+						+ "Total iterations before it found the object : " + (i+1));
 				return true;
 			}
 			temp = temp.next;
